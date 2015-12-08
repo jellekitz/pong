@@ -39,7 +39,7 @@ package actors
 		private function init(e:Event):void 
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
-			addChild(new BallArt());
+			addChild(new Bullet());
 			movement = new Point(0, 0);
 			this.addEventListener(Event.ENTER_FRAME, loop);
 		}

@@ -4,7 +4,7 @@ package actors
 	import flash.events.Event;
 	/**
 	 * ...
-	 * @author erwin henraat
+	 * @author Jelle Kitzen
 	 */
 	public class Player extends Paddle 
 	{

@@ -24,7 +24,8 @@ package sounds
 			loadSound("../lib/pong2.mp3");			
 			loadSound("../lib/pong3.mp3");	
 			loadSound("../lib/lose.mp3");	
-			loadSound("../lib/intro.mp3");	
+			loadSound("../lib/intro.mp3");
+			loadSound("../lib/Bulletproof.mp3")
 						
 			_main.addEventListener(GameScreen.BALL_BOUNCE, onBounce, true);
 			_main.addEventListener(GameScreen.GAME_OVER, onGameOver, true);
@@ -34,11 +35,12 @@ package sounds
 		
 		private function onIntro(e:Event):void 
 		{
-			playSound(4);
+			playSound(5);
 		}
 		
 		private function onGameOver(e:Event):void 
 		{
+			stopAllSounds();
 			playSound(3);
 		}		
 		private function onBounce(e:Event):void 
@@ -62,7 +64,13 @@ package sounds
 				_channel = _sounds[index].play(0,loops);
 			}			
 		}	
-		
+		private function stopAllSounds():void
+		{
+			for (var i:int = 0; i < _channels.length; i++) 
+			{
+				_channels[i].stop();
+			}
+		}
 	}
 
 }

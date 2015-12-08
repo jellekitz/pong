@@ -61,7 +61,7 @@ package sounds
 			else
 			{			
 				var transform:SoundTransform = new SoundTransform(volume, pan);
-				_channels = _sounds[index].play(0,loops);
+				_channel = _sounds[index].play(0,loops);
 			}			
 		}	
 		private function stopAllSounds():void
